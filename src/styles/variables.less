@@ -1,0 +1,238 @@
+:root {
+  --b-disabled-opacity: 0.5;
+
+  // Font
+  --b-font-bold: bold;
+  --b-font-size-xs: 10px;
+  --b-font-size-s: 12px;
+  --b-font-size-sm: 13px;
+  --b-font-size-m: 14px;
+  --b-font-size-ml: 15px;
+  --b-font-size-l: 16px;
+  --b-font-size-xl: 18px;
+  --b-font-size-xxl: 20px;
+  --b-line-height-xs: 14px;
+  --b-line-height-m: 18px;
+  --b-line-height-ml: 20px;
+  --b-line-height-l: 22px;
+  --b-line-height-xl: 24px;
+
+  // Padding
+  --b-padding-base: 4px;
+  --b-padding-xs: 8px;
+  --b-padding-s: 10px;
+  --b-padding-sm: 12px;
+  --b-padding-m: 16px;
+  --b-padding-ml: 20px;
+  --b-padding-l: 24px;
+  --b-padding-xl: 32px;
+
+  // Border
+  --b-border-color: var(--b-l-grey-500);
+  --b-border-color-d: var(--b-d-grey-500);
+  --b-border-width: 1px;
+  --b-radius-s: 2px;
+  --b-radius-m: 4px;
+  --b-radius-l: 8px;
+  --b-radius-max: 999px;
+
+  // Animation
+  --b-duration-base: 0.3s;
+  --b-duration-fast: 0.2s;
+  --b-ease-out: ease-out;
+  --b-ease-in: ease-in;
+
+  // 白色
+  --b-l-white-100: #ffffff;
+  --b-l-white-200: #feffff;
+  --b-l-white-300: #fffffe;
+  --b-d-white-100: #151517;
+  --b-d-white-200: #1d1d1f;
+  --b-d-white-300: rgba(255, 255, 254, 0.9);
+
+  // 中性灰
+  --b-l-grey-100: #f5f5f6;
+  --b-l-grey-200: #f5f5f5;
+  --b-l-grey-300: #f0f0f0;
+  --b-l-grey-400: #e0e0e0;
+  --b-l-grey-500: #cccccc;
+  --b-l-grey-600: #b8b8b8;
+  --b-l-grey-700: #858585;
+  --b-l-grey-800: #5e5e5e;
+  --b-l-grey-900: #292929;
+  --b-l-grey-1000: #141414;
+
+  --b-d-grey-100: #131314;
+  --b-d-grey-200: #262629;
+  --b-d-grey-300: #303033;
+  --b-d-grey-400: #363638;
+  --b-d-grey-500: #4f4f52;
+  --b-d-grey-600: #6d6d70;
+  --b-d-grey-700: #818185;
+  --b-d-grey-800: #9e9ea1;
+  --b-d-grey-900: #d2d2d6;
+  --b-d-grey-1000: #e6e6eb;
+
+  // b蓝
+  --b-l-b-100: #e3f5f5;
+  --b-l-b-200: #cef5f5;
+  --b-l-b-300: #a4ebeb;
+  --b-l-b-400: #78d6d6;
+  --b-l-b-500: #48c7c7;
+  --b-l-b-600: #15b3b3;
+  --b-l-b-700: #0d9ea3;
+  --b-l-b-800: #07727a;
+  --b-l-b-900: #04535c;
+  --b-l-b-1000: #003e47;
+
+  --b-d-b-100: #dfebeb;
+  --b-d-b-200: #caebeb;
+  --b-d-b-300: #a2e0e0;
+  --b-d-b-400: #76cccc;
+  --b-d-b-500: #48bdbd;
+  --b-d-b-600: #18a8a8;
+  --b-d-b-700: #0f9499;
+  --b-d-b-800: #096970;
+  --b-d-b-900: #054a52;
+  --b-d-b-1000: #01363d;
+
+  // 极光紫
+  --b-l-purple-100: #efebff;
+  --b-l-purple-200: #ded4ff;
+  --b-l-purple-300: #c8b8ff;
+  --b-l-purple-400: #a98fff;
+  --b-l-purple-500: #8a66ff;
+  --b-l-purple-600: #7046fa;
+  --b-l-purple-700: #603cd6;
+  --b-l-purple-800: #5535bd;
+  --b-l-purple-900: #492ea3;
+  --b-l-purple-1000: #40288f;
+
+  --b-d-purple-100: #e9e6f5;
+  --b-d-purple-200: #d5ccf0;
+  --b-d-purple-300: #bfb1f0;
+  --b-d-purple-400: #a38bf0;
+  --b-d-purple-500: #8665f0;
+  --b-d-purple-600: #6d46eb;
+  --b-d-purple-700: #5c3cc7;
+  --b-d-purple-800: #5034ad;
+  --b-d-purple-900: #452c94;
+  --b-d-purple-1000: #3b2680;
+
+  // 朝阳橙
+  --b-l-orange-100: #fff0eb;
+  --b-l-orange-200: #ffe1d6;
+  --b-l-orange-300: #ffd2c2;
+  --b-l-orange-400: #ffb499;
+  --b-l-orange-500: #ff9670;
+  --b-l-orange-600: #ff7847;
+  --b-l-orange-700: #f06a3a;
+  --b-l-orange-800: #d1562a;
+  --b-l-orange-900: #b84116;
+  --b-l-orange-1000: #a33710;
+
+  --b-d-orange-100: #f5eae6;
+  --b-d-orange-200: #f5dcd3;
+  --b-d-orange-300: #f5cdbf;
+  --b-d-orange-400: #f5b098;
+  --b-d-orange-500: #f59471;
+  --b-d-orange-600: #f57749;
+  --b-d-orange-700: #e6683c;
+  --b-d-orange-800: #c7552c;
+  --b-d-orange-900: #ad4018;
+  --b-d-orange-1000: #99340f;
+
+  // 危险红
+  --b-l-red-100: #fff0f1;
+  --b-l-red-200: #ffe0e3;
+  --b-l-red-300: #ffc2c5;
+  --b-l-red-400: #ff999f;
+  --b-l-red-500: #ff7079;
+  --b-l-red-600: #ff4753;
+  --b-l-red-700: #e03641;
+  --b-l-red-800: #bd222b;
+  --b-l-red-900: #a3101a;
+  --b-l-red-1000: #850b12;
+
+  --b-d-red-100: #f5ebec;
+  --b-d-red-200: #f5dcde;
+  --b-d-red-300: #f5bfc2;
+  --b-d-red-400: #f5989e;
+  --b-d-red-500: #f57179;
+  --b-d-red-600: #f54954;
+  --b-d-red-700: #d63842;
+  --b-d-red-800: #b3242c;
+  --b-d-red-900: #99121b;
+  --b-d-red-1000: #7a0c13;
+
+  // 成功绿
+  --b-l-green-100: #ecf9e5;
+  --b-l-green-200: #d6f0c9;
+  --b-l-green-300: #c2ebae;
+  --b-l-green-400: #a7e08b;
+  --b-l-green-500: #89d662;
+  --b-l-green-600: #67cc35;
+  --b-l-green-700: #5dbd2d;
+  --b-l-green-800: #51ad23;
+  --b-l-green-900: #418f1a;
+  --b-l-green-1000: #367a14;
+
+  --b-d-green-100: #e6f0e1;
+  --b-d-green-200: #d0e6c5;
+  --b-d-green-300: #bce0ab;
+  --b-d-green-400: #a3d689;
+  --b-d-green-500: #85cc62;
+  --b-d-green-600: #64c236;
+  --b-d-green-700: #5ab32e;
+  --b-d-green-800: #4ea324;
+  --b-d-green-900: #3e851b;
+  --b-d-green-1000: #337014;
+
+  // 安全蓝
+  --b-l-blue-100: #ebf6ff;
+  --b-l-blue-200: #d6ebff;
+  --b-l-blue-300: #add6ff;
+  --b-l-blue-400: #7ab8ff;
+  --b-l-blue-500: #529dff;
+  --b-l-blue-600: #297eff;
+  --b-l-blue-700: #1f69e0;
+  --b-l-blue-800: #1557c2;
+  --b-l-blue-900: #0b46a3;
+  --b-l-blue-1000: #07337a;
+
+  --b-d-blue-100: #e6eef5;
+  --b-d-blue-200: #d3e4f5;
+  --b-d-blue-300: #abd0f5;
+  --b-d-blue-400: #7ab3f5;
+  --b-d-blue-500: #5399f5;
+  --b-d-blue-600: #2c7cf5;
+  --b-d-blue-700: #2267d6;
+  --b-d-blue-800: #1855b8;
+  --b-d-blue-900: #0e4499;
+  --b-d-blue-1000: #093070;
+
+  --b-primary-color: var(--b-l-b-600);
+  --b-primary-font-color: var(--b-l-b-700);
+  --b-success-color: var(--b-l-green-600);
+  --b-danger-color: var(--b-l-red-600);
+  --b-warning-color: var(--b-l-orange-600);
+  --b-safe-color: var(--b-l-blue-600);
+
+  --b-primary-color-d: var(--b-d-b-600);
+  --b-primary-font-color-d: var(--b-d-b-700);
+  --b-success-color-d: var(--b-d-green-600);
+  --b-danger-color-d: var(--b-d-red-600);
+  --b-warning-color-d: var(--b-d-orange-600);
+  --b-safe-color-d: var(--b-d-blue-600);
+
+  --b-background: var(--b-l-grey-100);
+  --b-background-d: var(--b-d-grey-100);
+
+  --b-text-color: var(--b-l-grey-1000);
+  --b-text-color-d: var(--b-d-grey-1000);
+  --b-text-disabled-color: var(--b-l-grey-600);
+  --b-text-disabled-color-d: var(--b-d-grey-600);
+
+  --b-active-color: var(--b-l-grey-300);
+  --b-active-color-d: var(--b-d-grey-300);
+}

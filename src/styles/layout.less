@@ -1,0 +1,41 @@
+.flex-layout(@justify: center, @align: center) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.absolute-layout(left-top, @left: 0, @top: 0) {
+    position: absolute;
+    top: @top;
+    left: @left;
+}
+
+.absolute-layout(right-top, @right: 0, @top: 0) {
+    position: absolute;
+    top: @top;
+    right: @right;
+}
+
+.absolute-layout(left-bottom, @left: 0, @bottom: 0) {
+    position: absolute;
+    bottom: @bottom;
+    left: @left;
+}
+
+.absolute-layout(right-bottom, @right: 0, @bottom: 0) {
+    position: absolute;
+    bottom: @bottom;
+    right: @right;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.size-layout(@width: 100%, @height: 100%) {
+    width: @width;
+    height: @height;
+}

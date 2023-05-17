@@ -1,0 +1,103 @@
+// 从下到上
+.b-slide-bottom-enter-active,
+.b-slide-bottom-leave-active {
+    transition: all 0.3s ease-in-out;
+}
+
+.b-slide-bottom-enter-from {
+    transform: translate3d(0, 100%, 0) !important;
+}
+
+.b-slide-bottom-enter-to {
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.b-slide-bottom-leave-to {
+    transform: translate3d(0, 100%, 0) !important;
+}
+
+// 从上到下
+.b-slide-top-enter-active,
+.b-slide-top-leave-active {
+    transition: all 0.3s ease-in-out;
+}
+
+.b-slide-top-enter-from {
+    transform: translate3d(0, -100%, 0) !important;
+}
+
+.b-slide-top-enter-to {
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.b-slide-top-leave-to {
+    transform: translate3d(0, -100%, 0) !important;
+}
+
+// 从左到右
+.b-slide-left-enter-active,
+.b-slide-left-leave-active {
+    transition: all 0.3s ease-in-out;
+}
+
+.b-slide-left-enter-from {
+    transform: translate3d(-100%, 0, 0) !important;
+}
+
+.b-slide-left-enter-to {
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.b-slide-left-leave-to {
+    transform: translate3d(-100%, 0, 0) !important;
+}
+
+// 从右到左
+.b-slide-right-enter-active,
+.b-slide-right-leave-active {
+    transition: all 0.3s ease-in-out;
+}
+
+.b-slide-right-enter-from {
+    transform: translate3d(100%, 0, 0) !important;
+}
+
+.b-slide-right-enter-to {
+    transform: translate3d(0, 0, 0) !important;
+}
+
+.b-slide-right-leave-to {
+    transform: translate3d(100%, 0, 0) !important;
+}
+
+// 显隐
+.b-fade-enter-active,
+.b-fade-leave-active {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.b-fade-enter-from {
+    opacity: 0 !important;
+}
+
+.b-fade-enter-to {
+    opacity: 1 !important;
+}
+
+.b-fade-leave-to {
+    opacity: 0 !important;
+}
+
+.zoom-in-top-enter-active,
+.zoom-in-top-leave-active {
+    opacity: 1;
+    transform: scaleY(1);
+    transition: transform cubic-bezier(0.23, 1, 0.32, 1) var(--b-duration-base), opacity cubic-bezier(0.23, 1, 0.32, 1) var(--b-duration-base);
+    transform-origin: center top;
+}
+
+.zoom-in-top-enter-from,
+.zoom-in-top-leave-active {
+    opacity: 0;
+    transform: scaleY(0);
+}

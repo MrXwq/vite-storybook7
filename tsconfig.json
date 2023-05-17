@@ -1,0 +1,24 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "strict": true,
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true, // js也编译出d.ts
+    "noImplicitThis": true,
+    "target": "ES2015",
+    "module": "ESNext",
+  },
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

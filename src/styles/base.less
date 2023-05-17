@@ -1,0 +1,55 @@
+@import './animation.less';
+@import './mixins/ellipsis.less';
+@import './mixins/hairline.less';
+@import './layout.less';
+@import './normalize.less';
+@import './transition.less';
+@import './variables.less';
+@import './icon.less';
+
+
+[class*='b-hairline'] {
+    &::after {
+        .hairline();
+    }
+}
+
+.b-hairline {
+
+    &,
+    &--top,
+    &--left,
+    &--right,
+    &--bottom,
+    &--surround,
+    &--top-bottom {
+        position: relative;
+    }
+
+    &--top::after {
+        border-top-width: var(--b-border-width);
+    }
+
+    &--left::after {
+        border-left-width: var(--b-border-width);
+    }
+
+    &--right::after {
+        border-right-width: var(--b-border-width);
+    }
+
+    &--bottom::after {
+        border-bottom-width: var(--b-border-width);
+    }
+
+    &,
+    &-unset {
+        &--top-bottom::after {
+            border-width: var(--b-border-width) 0;
+        }
+    }
+
+    &--surround::after {
+        border-width: var(--b-border-width);
+    }
+}

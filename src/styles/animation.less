@@ -1,0 +1,13 @@
+@keyframes b-animate-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.b-public__rotate(@duration: 1s, @function: linear, @count: infinite) {
+  animation: b-animate-rotate @duration @function @count;
+}
+
+.b-public__fade(@duration: 1s, @function: linear, @count: 1) {
+  animation: b-animate-rotate @duration @function @count;
+}
