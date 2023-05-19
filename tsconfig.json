@@ -8,13 +8,20 @@
   ],
   "compilerOptions": {
     "baseUrl": ".",
-    "strict": true,
+    "target": "esnext",
+    "module": "esnext",
+    // "moduleResolution": "node",
     "jsx": "preserve",
-    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    // "skipLibCheck": true,
     "allowJs": true, // js也编译出d.ts
+    // "esModuleInterop": true,
+    // "sourceMap": true,
+    // "typeRoots": [
+    //   "./types"
+    // ],
+    "allowSyntheticDefaultImports": true,
     "noImplicitThis": true,
-    "target": "ES2015",
-    "module": "ESNext",
   },
   "references": [
     {

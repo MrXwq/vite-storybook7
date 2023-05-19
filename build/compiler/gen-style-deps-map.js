@@ -1,4 +1,5 @@
-import { ALL_COMPONENTS, SRC_DIR, STYLE_DEPS_JSON_FILE } from '../common/constant.js'
+import { SRC_DIR, STYLE_DEPS_JSON_FILE } from '../common/constant.js'
+import { getComponents } from '../common/index.js'
 import { smartOutputFile } from '../common/utils.js'
 import { clearDepsCache, fillExt, getDeps } from './get-deps.js'
 import { join, relative, sep } from 'path'
@@ -23,7 +24,7 @@ function analyzeComponentDeps(components, component) {
 
     const checkList = [];
     // 获取存在的文件路径
-    const componentEntry = fillExt(join(SRC_DIR, component, 'index'));
+    const componentEntry = fillExt(join(SRC_DIR, component, 'index')).path;
     const record = new Set();
 
     // 深度遍历
@@ -48,8 +49,8 @@ function analyzeComponentDeps(components, component) {
 
 
     search(componentEntry);
-    // return checkList.filter(checkStyleExists);
-    return checkList
+    console.log('checkList: ', checkList);
+    return checkList.filter(checkStyleExists);
 }
 
 function getSequence(components, depsMap) {
@@ -92,7 +93,7 @@ function getSequence(components, depsMap) {
 }
 
 export async function genStyleDepsMap() {
-    const components = ALL_COMPONENTS
+    const components = getComponents();
 
     return new Promise((resolve) => {
         clearDepsCache();

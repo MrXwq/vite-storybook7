@@ -1,45 +1,49 @@
-import { createNamespace, makeStringProp, BORDER_SURROUND } from '../utils/index'
-import { defineComponent } from 'vue'
-import type { CSSProperties, PropType } from 'vue'
-// import { Icon } from '../icon/index'
+import { createNamespace, makeStringProp, BORDER_SURROUND } from '../utils'
+import { type PropType, defineComponent } from 'vue'
+import type { CSSProperties, ExtractPropTypes } from 'vue'
+import { Icon } from '../icon'
+import type { ThemeType } from '../utils'
 
 const [name, bem] = createNamespace('button')
 
 // Types
 import type { ButtonSize, ButtonType, ButtonIconPosition } from './types'
 
-export type ThemeType = 'light' | 'dark' | ''
+const buttonProps = {
+  icon: String,
+  disabled: Boolean,
+  outline: Boolean,
+  color: String,
+  block: Boolean,
+  text: String,
+  round: Boolean,
+  hairline: Boolean,
+  square: Boolean,
+  tag: {
+    type: String as PropType<keyof HTMLElementTagNameMap>,
+    default: 'div'
+  },
+  type: {
+    type: String as PropType<ButtonType>,
+    default: 'default'
+  },
+  selected: Boolean,
+  themeType: {
+    type: String as PropType<ThemeType>,
+    default: ''
+  },
+  size: {
+    type: String as PropType<ButtonSize>,
+    default: 'normal'
+  },
+  iconPosition: makeStringProp<ButtonIconPosition>('left')
+}
+
+export type ButtonProps = ExtractPropTypes<typeof buttonProps>
 
 export default defineComponent({
   name,
-  props: {
-    icon: String,
-    disabled: Boolean,
-    outline: Boolean,
-    color: String,
-    block: Boolean,
-    text: String,
-    round: Boolean,
-    hairline: Boolean,
-    square: Boolean,
-    tag: {
-      type: String as PropType<keyof HTMLElementTagNameMap>,
-      default: 'div'
-    },
-    type: {
-      type: String as PropType<ButtonType>,
-      default: 'default'
-    },
-    themeType: {
-      type: String as PropType<ThemeType>,
-      default: ''
-    },
-    size: {
-      type: String as PropType<ButtonSize>,
-      default: 'normal'
-    },
-    iconPosition: makeStringProp<ButtonIconPosition>('left')
-  },
+  props: buttonProps,
   emits: ['click', 'disabled'],
   setup(props, { emit, slots }) {
     const getStyle = () => {
@@ -74,9 +78,9 @@ export default defineComponent({
         return <div class={bem('icon')}>{slots.icon()}</div>
       }
 
-      // if (props.icon) {
-      //     return <Icon name={props.icon} class={bem('icon')} />
-      // }
+      if (props.icon) {
+        return <Icon name={props.icon} class={bem('icon')} />
+      }
     }
     const renderText = () => {
       const text = slots.default ? slots.default() : props.text
@@ -97,7 +101,8 @@ export default defineComponent({
         round,
         iconPosition,
         hairline,
-        square
+        square,
+        selected
       } = props
       const classes = [
         bem(themeType, [
@@ -109,7 +114,8 @@ export default defineComponent({
             block,
             round,
             hairline,
-            square
+            square,
+            selected
           }
         ]),
         { [BORDER_SURROUND]: hairline }

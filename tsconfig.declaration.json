@@ -2,10 +2,11 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./lib",
+    "declarationDir": ".",
     "emitDeclarationOnly": true
   },
   "include": [
+    "es/**/*",
     "lib/**/*"
   ],
   "exclude": [

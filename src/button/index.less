@@ -1,599 +1,838 @@
 :root {
-  --b-button-mini-height: 24px;
-  --b-button-mini-padding: 0 var(--b-padding-base);
-  --b-button-mini-font-size: var(--b-font-size-s);
-  --b-button-default-height: 44px;
-  --b-button-large-height: 50px;
-  --b-button-large-font-size: 0 15px;
-  --b-button-large-padding: 0 20px;
-  --b-button-normal-padding: 0 15px;
-  --b-button-normal-font-size: var(--b-font-size-m);
-  --b-button-small-height: 32px;
-  --b-button-small-padding: 0 var(--b-padding-s);
-  --b-button-small-font-size: var(--b-font-size-sm);
-  --b-button-default-line-height: 1.2;
-  --b-button-default-font-size: var(--b-font-size-l);
-  --b-button-icon-size: 1.2em;
-  --b-button-radius: var(--b-radius-l);
-  --b-duration-fast: var(--b-duration-fast);
-  --b-button-border-width: var(--b-border-width);
-  --b-button-round-radius: var(--b-radius-max);
-  --b-button-disabled-opacity: var(--b-disabled-opacity);
+    --b-button-mini-height: 24px;
+    --b-button-mini-padding: 0 var(--b-padding-xs);
+    --b-button-mini-font-size: var(--b-font-size-s);
+    --b-button-default-height: 44px;
+    --b-button-large-height: 50px;
+    --b-button-large-font-size: 0 15px;
+    --b-button-large-padding: 0 20px;
+    --b-button-normal-padding: 0 15px;
+    --b-button-normal-font-size: var(--b-font-size-l);
+    --b-button-small-height: 32px;
+    --b-button-small-padding: 0 var(--b-padding-s);
+    --b-button-small-font-size: var(--b-font-size-sm);
+    --b-button-default-line-height: 1.2;
+    --b-button-default-font-size: var(--b-font-size-l);
+    --b-button-icon-size: 1em;
+    --b-button-radius: var(--b-radius-l);
+    --b-duration-fast: var(--b-duration-fast);
+    --b-button-border-width: var(--b-border-width);
+    --b-button-round-radius: var(--b-radius-max);
+    --b-button-disabled-opacity: var(--b-disabled-opacity);
 
-  --b-button-outline-background: var(--b-l-white-100);
-  --b-button-outline-background-d: var(--b-d-white-100);
+    --b-button-outline-background: var(--b-l-white-100);
+    --b-button-outline-background-d: var(--b-d-white-100);
 
-  // default
-  --b-button-default-color: var(--b-primary-font-color);
-  --b-button-default-background: var(--b-l-white-100);
-  --b-button-default-background-active: rgba(204, 204, 204, 0.08);
-  --b-button-default-border-color: var(--b-border-color);
-  --b-button-warning-border-color-disabled: var(--b-l-grey-500);
+    // default
+    --b-button-default-color: var(--b-primary-font-color);
+    --b-button-default-background: var(--b-l-white-100);
+    --b-button-default-background-active: rgba(204, 204, 204, 0.08);
+    --b-button-default-border-color: var(--b-l-grey-500);
+    --b-button-default-border-color-disabled: var(--b-l-grey-500);
 
-  --b-button-default-color-d: var(--b-primary-font-color-d);
-  --b-button-default-background-d: var(--b-d-white-100);
-  --b-button-default-background-active-d: rgba(79, 79, 82, 0.08);
-  --b-button-default-border-color-d: var(--b-border-color-d);
-  --b-button-warning-border-color-disabled-d: var(--b-d-grey-500);
+    --b-button-default-color-d: var(--b-primary-font-color-d);
+    --b-button-default-background-d: var(--b-d-white-100);
+    --b-button-default-background-active-d: rgba(79, 79, 82, 0.08);
+    --b-button-default-border-color-d: var(--b-d-grey-500);
+    --b-button-default-border-color-disabled-d: var(--b-d-grey-500);
 
-  // primary
-  --b-button-primary-color: var(--b-l-white-300);
-  --b-button-primary-background: var(--b-primary-color);
-  --b-button-primary-background-active: var(--b-l-b-700);
-  --b-button-primary-background-disabled: var(--b-l-b-400);
-  --b-button-primary-border-color: var(--b-primary-color);
-  --b-button-primary-border-color-disabled: var(--b-l-b-300);
+    // primary
+    --b-button-primary-color: var(--b-l-white-300);
+    --b-button-primary-background: var(--b-primary-color);
+    --b-button-primary-background-active: var(--b-l-boss-700);
+    --b-button-primary-background-disabled: var(--b-l-boss-400);
+    --b-button-primary-border-color: var(--b-l-boss-500);
+    --b-button-primary-border-color-disabled: var(--b-l-boss-300);
 
-  --b-button-primary-color-d: var(--b-d-white-300);
-  --b-button-primary-background-d: var(--b-primary-color-d);
-  --b-button-primary-background-active-d: var(--b-d-b-700);
-  --b-button-primary-background-disabled-d: var(--b-d-b-400);
-  --b-button-primary-border-color-d: var(--b-primary-color-d);
-  --b-button-primary-border-color-disabled-d: var(--b-d-b-300);
+    --b-button-primary-color-d: var(--b-d-white-300);
+    --b-button-primary-background-d: var(--b-primary-color-d);
+    --b-button-primary-background-active-d: var(--b-d-boss-700);
+    --b-button-primary-background-disabled-d: var(--b-d-boss-400);
+    --b-button-primary-border-color-d: var(--b-d-boss-500);
+    --b-button-primary-border-color-disabled-d: var(--b-d-boss-300);
 
-  // success
-  --b-button-success-color: var(--b-l-white-300);
-  --b-button-success-background: var(--b-success-color);
-  --b-button-success-background-active: var(--b-l-green-700);
-  --b-button-success-background-disabled: var(--b-l-green-400);
-  --b-button-success-border-color: var(--b-success-color);
-  --b-button-success-border-color-disabled: var(--b-l-green-300);
+    // minor
+    --b-button-minor-color: var(--b-l-grey-800);
+    --b-button-minor-background: var(--b-minor-color);
+    --b-button-minor-background-active: var(--b-l-grey-300);
+    --b-button-minor-background-disabled: var(--b-l-grey-200);
+    --b-button-minor-font-disabled: var(--b-l-grey-600);
+    --b-button-minor-border-color: var(--b-l-grey-500);
+    --b-button-minor-border-color-disabled: var(--b-l-grey-500);
 
-  --b-button-success-color-d: var(--b-d-white-300);
-  --b-button-success-background-d: var(--b-success-color-d);
-  --b-button-success-background-active-d: var(--b-d-green-700);
-  --b-button-success-background-disabled-d: var(--b-d-green-400);
-  --b-button-success-border-color-d: var(--b-success-color-d);
-  --b-button-success-border-color-disabled-d: var(--b-d-green-300);
-  // danger
-  --b-button-danger-color: var(--b-l-white-300);
-  --b-button-danger-background: var(--b-danger-color);
-  --b-button-danger-background-active: var(--b-l-red-700);
-  --b-button-danger-background-disabled: var(--b-l-red-400);
-  --b-button-danger-border-color: var(--b-danger-color);
-  --b-button-danger-border-color-disabled: var(--b-l-red-300);
+    --b-button-minor-color-d: var(--b-d-grey-800);
+    --b-button-minor-background-d: var(--b-minor-color-d);
+    --b-button-minor-background-active-d: var(--b-d-grey-300);
+    --b-button-minor-background-disabled-d: var(--b-d-grey-200);
+    --b-button-minor-font-disabled-d: var(--b-d-grey-600);
+    --b-button-minor-border-color-d: var(--b-d-grey-500);
+    --b-button-minor-border-color-disabled-d: var(--b-d-grey-500);
 
-  --b-button-danger-color-d: var(--b-d-white-300);
-  --b-button-danger-background-d: var(--b-danger-color-d);
-  --b-button-danger-background-active-d: var(--b-d-red-700);
-  --b-button-danger-background-disabled-d: var(--b-d-red-400);
-  --b-button-danger-border-color-d: var(--b-danger-color-d);
-  --b-button-danger-border-color-disabled-d: var(--b-d-red-300);
-  // warning
-  --b-button-warning-color: var(--b-l-white-300);
-  --b-button-warning-background: var(--b-warning-color);
-  --b-button-warning-background-active: var(--b-l-orange-700);
-  --b-button-warning-background-disabled: var(--b-l-orange-400);
-  --b-button-warning-border-color: var(--b-warning-color);
-  --b-button-warning-border-color-disabled: var(--b-l-orange-300);
+    // success
+    --b-button-success-color: var(--b-l-white-300);
+    --b-button-success-background: var(--b-success-color);
+    --b-button-success-background-active: var(--b-l-green-700);
+    --b-button-success-background-disabled: var(--b-l-green-400);
+    --b-button-success-border-color: var(--b-l-green-500);
+    --b-button-success-border-color-disabled: var(--b-l-green-300);
 
-  --b-button-warning-color-d: var(--b-d-white-300);
-  --b-button-warning-background-d: var(--b-warning-color-d);
-  --b-button-warning-background-active-d: var(--b-d-orange-700);
-  --b-button-warning-background-disabled-d: var(--b-d-orange-400);
-  --b-button-warning-border-color-d: var(--b-warning-color-d);
-  --b-button-warning-border-color-disabled-d: var(--b-d-orange-300);
-  // safe
-  --b-button-safe-color: var(--b-l-white-300);
-  --b-button-safe-background: var(--b-safe-color);
-  --b-button-safe-background-active: var(--b-l-blue-700);
-  --b-button-safe-background-disabled: var(--b-l-blue-400);
-  --b-button-safe-border-color: var(--b-safe-color);
-  --b-button-safe-border-color-disabled: var(--b-l-blue-300);
+    --b-button-success-color-d: var(--b-d-white-300);
+    --b-button-success-background-d: var(--b-success-color-d);
+    --b-button-success-background-active-d: var(--b-d-green-700);
+    --b-button-success-background-disabled-d: var(--b-d-green-400);
+    --b-button-success-border-color-d: var(--b-d-green-500);
+    --b-button-success-border-color-disabled-d: var(--b-d-green-300);
+    // danger
+    --b-button-danger-color: var(--b-l-white-300);
+    --b-button-danger-background: var(--b-danger-color);
+    --b-button-danger-background-active: var(--b-l-red-700);
+    --b-button-danger-background-disabled: var(--b-l-red-400);
+    --b-button-danger-border-color: var(--b-l-red-500);
+    --b-button-danger-border-color-disabled: var(--b-l-red-300);
 
-  --b-button-safe-color-d: var(--b-d-white-300);
-  --b-button-safe-background-d: var(--b-safe-color-d);
-  --b-button-safe-background-active-d: var(--b-d-blue-700);
-  --b-button-safe-background-disabled-d: var(--b-d-blue-400);
-  --b-button-safe-border-color-d: var(--b-safe-color-d);
-  --b-button-safe-border-color-disabled-d: var(--b-d-blue-300);
+    --b-button-danger-color-d: var(--b-d-white-300);
+    --b-button-danger-background-d: var(--b-danger-color-d);
+    --b-button-danger-background-active-d: var(--b-d-red-700);
+    --b-button-danger-background-disabled-d: var(--b-d-red-400);
+    --b-button-danger-border-color-d: var(--b-d-red-500);
+    --b-button-danger-border-color-disabled-d: var(--b-d-red-300);
+    // warning
+    --b-button-warning-color: var(--b-l-white-300);
+    --b-button-warning-background: var(--b-warning-color);
+    --b-button-warning-background-active: var(--b-l-orange-700);
+    --b-button-warning-background-disabled: var(--b-l-orange-400);
+    --b-button-warning-border-color: var(--b-l-orange-500);
+    --b-button-warning-border-color-disabled: var(--b-l-orange-300);
+
+    --b-button-warning-color-d: var(--b-d-white-300);
+    --b-button-warning-background-d: var(--b-warning-color-d);
+    --b-button-warning-background-active-d: var(--b-d-orange-700);
+    --b-button-warning-background-disabled-d: var(--b-d-orange-400);
+    --b-button-warning-border-color-d: var(--b-d-orange-500);
+    --b-button-warning-border-color-disabled-d: var(--b-d-orange-300);
+    // safe
+    --b-button-safe-color: var(--b-l-white-300);
+    --b-button-safe-background: var(--b-safe-color);
+    --b-button-safe-background-active: var(--b-l-blue-700);
+    --b-button-safe-background-disabled: var(--b-l-blue-400);
+    --b-button-safe-border-color: var(--b-l-blue-500);
+    --b-button-safe-border-color-disabled: var(--b-l-blue-300);
+
+    --b-button-safe-color-d: var(--b-d-white-300);
+    --b-button-safe-background-d: var(--b-safe-color-d);
+    --b-button-safe-background-active-d: var(--b-d-blue-700);
+    --b-button-safe-background-disabled-d: var(--b-d-blue-400);
+    --b-button-safe-border-color-d: var(--b-d-blue-500);
+    --b-button-safe-border-color-disabled-d: var(--b-d-blue-300);
 }
 
 .b-button__light,
 .b-button__dark,
 .b-button {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  text-align: center;
-  border: 0;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-  border-radius: var(--b-button-radius);
-  height: var(--b-button-default-height);
-  line-height: var(--b-button-default-line-height);
-  font-size: var(--b-button-default-font-size);
-  transition: opacity var(--b-duration-fast);
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border-radius: var(--b-button-radius);
+    height: var(--b-button-default-height);
+    line-height: var(--b-button-default-line-height);
+    font-size: var(--b-button-default-font-size);
+    transition: opacity var(--b-duration-fast);
 
-  &__icon {
-    font-size: var(--b-button-icon-size);
-    line-height: inherit;
-  }
-
-  &__icon + &__text,
-  &__loading + &__text,
-  &__text + &__icon,
-  &__text + &__loading {
-    margin-left: var(--b-padding-base);
-  }
-
-  // 图片组件和icon组件摆在一块会不居中
-  &__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-
-    &::before {
-      content: ' ';
+    &__icon {
+        font-size: var(--b-button-icon-size);
+        line-height: inherit;
     }
-  }
 
-  &--default {
-    color: var(--b-button-default-color);
-    background: var(--b-button-default-background);
-    border: var(--b-button-border-width) solid var(--b-button-default-border-color);
-
-    &:active {
-      background: var(--b-button-default-background-active);
+    &__icon + &__text,
+    &__loading + &__text,
+    &__text + &__icon,
+    &__text + &__loading {
+        margin-left: var(--b-padding-base);
     }
-  }
 
-  &--primary {
-    color: var(--b-button-primary-color);
-    background: var(--b-button-primary-background);
-    border: var(--b-button-border-width) solid var(--b-button-primary-border-color);
+    // 图片组件和icon组件摆在一块会不居中
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
 
-    &:active {
-      background: var(--b-button-primary-background-active);
-      border: var(--b-button-border-width) solid var(--b-button-primary-background-active);
-    }
-  }
-
-  &--success {
-    color: var(--b-button-success-color);
-    background: var(--b-button-success-background);
-    border: var(--b-button-border-width) solid var(--b-button-success-border-color);
-
-    &:active {
-      background: var(--b-button-success-background-active);
-      border: var(--b-button-border-width) solid var(--b-button-success-background-active);
-    }
-  }
-
-  &--danger {
-    color: var(--b-button-danger-color);
-    background: var(--b-button-danger-background);
-    border: var(--b-button-border-width) solid var(--b-button-danger-border-color);
-
-    &:active {
-      background: var(--b-button-danger-background-active);
-      border: var(--b-button-border-width) solid var(--b-button-danger-background-active);
-    }
-  }
-
-  &--warning {
-    color: var(--b-button-warning-color);
-    background: var(--b-button-warning-background);
-    border: var(--b-button-border-width) solid var(--b-button-warning-border-color);
-
-    &:active {
-      background: var(--b-button-warning-background-active);
-      border: var(--b-button-border-width) solid var(--b-button-warning-background-active);
-    }
-  }
-
-  &--safe {
-    color: var(--b-button-safe-color);
-    background: var(--b-button-safe-background);
-    border: var(--b-button-border-width) solid var(--b-button-safe-border-color);
-
-    &:active {
-      background: var(--b-button-safe-background-active);
-      border: var(--b-button-border-width) solid var(--b-button-safe-background-active);
-    }
-  }
-
-  &--large {
-    height: var(--b-button-large-height);
-    font-size: var(--b-button-large-font-size);
-    padding: var(--b-button-large-padding);
-  }
-
-  &--normal {
-    padding: var(--b-button-normal-padding);
-    font-size: var(--b-button-normal-font-size);
-  }
-
-  &--small {
-    height: var(--b-button-small-height);
-    padding: var(--b-button-small-padding);
-    font-size: var(--b-button-small-font-size);
-  }
-
-  &--mini {
-    height: var(--b-button-mini-height);
-    padding: var(--b-button-mini-padding);
-    font-size: var(--b-button-mini-font-size);
-  }
-
-  &--outline {
-    background: var(--b-button-outline-background);
-
-    &.b-button__light,
-    &.b-button__dark,
-    &.b-button {
-      &--default {
-        &:active {
-          background: rgba(204, 204, 204, 0.08);
+        &::before {
+            content: ' ';
         }
-      }
+    }
 
-      &--primary {
-        color: var(--b-button-primary-background);
+    &--default {
+        color: var(--b-button-default-color);
+        background: var(--b-button-default-background);
+        border: var(--b-button-border-width) solid
+            var(--b-button-default-border-color);
 
         &:active {
-          background: rgba(21, 179, 179, 0.04);
+            background: var(--b-button-default-background-active);
         }
-      }
+    }
 
-      &--success {
-        color: var(--b-button-success-background);
+    &--primary {
+        color: var(--b-button-primary-color);
+        background: var(--b-button-primary-background);
+        border: var(--b-button-border-width) solid
+            var(--b-button-primary-background);
 
         &:active {
-          background: rgba(103, 204, 53, 0.04);
+            background: var(--b-button-primary-background-active);
+            border: var(--b-button-border-width) solid
+                var(--b-button-primary-background-active);
         }
-      }
+    }
 
-      &--danger {
-        color: var(--b-button-danger-background);
+    &--success {
+        color: var(--b-button-success-color);
+        background: var(--b-button-success-background);
+        border: var(--b-button-border-width) solid
+            var(--b-button-success-background);
 
         &:active {
-          background: rgba(255, 71, 83, 0.04);
+            background: var(--b-button-success-background-active);
+            border: var(--b-button-border-width) solid
+                var(--b-button-success-background-active);
         }
-      }
+    }
 
-      &--warning {
-        color: var(--b-button-warning-background);
+    &--danger {
+        color: var(--b-button-danger-color);
+        background: var(--b-button-danger-background);
+        border: var(--b-button-border-width) solid
+            var(--b-button-danger-background);
 
         &:active {
-          background: rgba(255, 120, 71, 0.04);
+            background: var(--b-button-danger-background-active);
+            border: var(--b-button-border-width) solid
+                var(--b-button-danger-background-active);
         }
-      }
+    }
 
-      &--safe {
-        color: var(--b-button-safe-background);
+    &--warning {
+        color: var(--b-button-warning-color);
+        background: var(--b-button-warning-background);
+        border: var(--b-button-border-width) solid
+            var(--b-button-warning-background);
 
         &:active {
-          background: rgba(41, 126, 255, 0.04);
+            background: var(--b-button-warning-background-active);
+            border: var(--b-button-border-width) solid
+                var(--b-button-warning-background-active);
         }
-      }
+    }
 
-      &--disabled {
+    &--safe {
+        color: var(--b-button-safe-color);
+        background: var(--b-button-safe-background);
+        border: var(--b-button-border-width) solid
+            var(--b-button-safe-background);
+
+        &:active {
+            background: var(--b-button-safe-background-active);
+            border: var(--b-button-border-width) solid
+                var(--b-button-safe-background-active);
+        }
+    }
+
+    &--minor {
+        color: var(--b-button-minor-color);
+        background: var(--b-button-minor-background);
+        border: var(--b-button-border-width) solid
+            var(--b-button-minor-background);
+
+        &:active {
+            background: var(--b-button-minor-background-active);
+            border: var(--b-button-border-width) solid
+                var(--b-button-minor-background-active);
+        }
+    }
+
+    &--large {
+        height: var(--b-button-large-height);
+        font-size: var(--b-button-large-font-size);
+        padding: var(--b-button-large-padding);
+    }
+
+    &--normal {
+        padding: var(--b-button-normal-padding);
+        font-size: var(--b-button-normal-font-size);
+    }
+
+    &--small {
+        height: var(--b-button-small-height);
+        padding: var(--b-button-small-padding);
+        font-size: var(--b-button-small-font-size);
+    }
+
+    &--mini {
+        height: var(--b-button-mini-height);
+        padding: var(--b-button-mini-padding);
+        font-size: var(--b-button-mini-font-size);
+    }
+
+    &--outline {
+        background: var(--b-button-outline-background);
+
         &.b-button__light,
         &.b-button__dark,
         &.b-button {
-          background: var(--b-button-outline-background);
+            &--selected {
+                &.b-button__light,
+                &.b-button__dark,
+                &.b-button {
+                    &--default {
+                        background: rgba(204, 204, 204, 0.08);
+                    }
+                    &--primary {
+                        color: var(--b-button-primary-background);
+                        border-color: var(--b-button-primary-border-color);
+                        background: rgba(21, 179, 179, 0.04);
+                    }
+                    &--success {
+                        color: var(--b-button-success-background);
+                        border-color: var(--b-button-success-border-color);
+                        background: rgba(103, 204, 53, 0.04);
+                    }
 
-          &--default {
-            color: var(--b-button-primary-background-disabled);
-            border-color: var(--b-button-default-border-color-disabled);
-          }
+                    &--danger {
+                        color: var(--b-button-danger-background);
+                        border-color: var(--b-button-danger-border-color);
+                        background: rgba(255, 71, 83, 0.04);
+                    }
 
-          &--primary {
-            color: var(--b-button-primary-background-disabled);
-            border-color: var(--b-button-primary-border-color-disabled);
-          }
+                    &--warning {
+                        color: var(--b-button-warning-background);
+                        border-color: var(--b-button-warning-border-color);
+                        background: rgba(255, 120, 71, 0.04);
+                    }
 
-          &--success {
-            color: var(--b-button-success-background-disabled);
-            border-color: var(--b-button-success-border-color-disabled);
-          }
+                    &--safe {
+                        color: var(--b-button-safe-background);
+                        border-color: var(--b-button-safe-border-color);
+                        background: rgba(41, 126, 255, 0.04);
+                    }
 
-          &--danger {
-            color: var(--b-button-danger-background-disabled);
-            border-color: var(--b-button-danger-border-color-disabled);
-          }
+                    &--minor {
+                        color: var(--b-button-minor-color);
+                        border-color: var(--b-button-minor-border-color);
+                        background: rgba(204, 204, 204, 0.08);
+                    }
+                }
+            }
 
-          &--warning {
-            color: var(--b-button-warning-background-disabled);
-            border-color: var(--b-button-warning-border-color-disabled);
-          }
+            &--default {
+                &:active {
+                    background: rgba(204, 204, 204, 0.08);
+                }
+            }
 
-          &--safe {
-            color: var(--b-button-safe-background-disabled);
-            border-color: var(--b-button-safe-border-color-disabled);
-          }
+            &--primary {
+                color: var(--b-button-primary-background);
+                border-color: var(--b-button-primary-border-color);
+
+                &:active {
+                    background: rgba(21, 179, 179, 0.04);
+                }
+            }
+
+            &--success {
+                color: var(--b-button-success-background);
+                border-color: var(--b-button-success-border-color);
+
+                &:active {
+                    background: rgba(103, 204, 53, 0.04);
+                }
+            }
+
+            &--danger {
+                color: var(--b-button-danger-background);
+                border-color: var(--b-button-danger-border-color);
+
+                &:active {
+                    background: rgba(255, 71, 83, 0.04);
+                }
+            }
+
+            &--warning {
+                color: var(--b-button-warning-background);
+                border-color: var(--b-button-warning-border-color);
+
+                &:active {
+                    background: rgba(255, 120, 71, 0.04);
+                }
+            }
+
+            &--safe {
+                color: var(--b-button-safe-background);
+                border-color: var(--b-button-safe-border-color);
+
+                &:active {
+                    background: rgba(41, 126, 255, 0.04);
+                }
+            }
+
+            &--minor {
+                color: var(--b-button-minor-color);
+                border-color: var(--b-button-minor-border-color);
+
+                &:active {
+                    background: rgba(204, 204, 204, 0.08);
+                }
+            }
+
+            &--disabled {
+                &.b-button__light,
+                &.b-button__dark,
+                &.b-button {
+                    background: var(--b-button-outline-background);
+
+                    &--default {
+                        color: var(--b-button-primary-background-disabled);
+                        border-color: var(
+                            --b-button-default-border-color-disabled
+                        );
+                    }
+
+                    &--primary {
+                        color: var(--b-button-primary-background-disabled);
+                        border-color: var(
+                            --b-button-primary-border-color-disabled
+                        );
+                    }
+
+                    &--success {
+                        color: var(--b-button-success-background-disabled);
+                        border-color: var(
+                            --b-button-success-border-color-disabled
+                        );
+                    }
+
+                    &--danger {
+                        color: var(--b-button-danger-background-disabled);
+                        border-color: var(
+                            --b-button-danger-border-color-disabled
+                        );
+                    }
+
+                    &--warning {
+                        color: var(--b-button-warning-background-disabled);
+                        border-color: var(
+                            --b-button-warning-border-color-disabled
+                        );
+                    }
+
+                    &--safe {
+                        color: var(--b-button-safe-background-disabled);
+                        border-color: var(
+                            --b-button-safe-border-color-disabled
+                        );
+                    }
+                    &--minor {
+                        color: var(--b-button-minor-font-disabled);
+                    }
+                }
+            }
         }
-      }
-    }
-  }
-
-  &--disabled {
-    cursor: not-allowed;
-
-    &.b-button__light,
-    &.b-button__dark,
-    &.b-button {
-      &--primary {
-        background: var(--b-button-primary-background-disabled);
-        border: var(--b-button-border-width) solid var(--b-button-primary-background-disabled);
-      }
-
-      &--success {
-        background: var(--b-button-success-background-disabled);
-        border: var(--b-button-border-width) solid var(--b-button-success-background-disabled);
-      }
-
-      &--danger {
-        background: var(--b-button-danger-background-disabled);
-        border: var(--b-button-border-width) solid var(--b-button-danger-background-disabled);
-      }
-
-      &--warning {
-        background: var(--b-button-warning-background-disabled);
-        border: var(--b-button-border-width) solid var(--b-button-warning-background-disabled);
-      }
-
-      &--safe {
-        background: var(--b-button-safe-background-disabled);
-        border: var(--b-button-border-width) solid var(--b-button-safe-background-disabled);
-      }
-    }
-  }
-
-  &--block {
-    display: block;
-    width: 100%;
-  }
-
-  &--round {
-    border-radius: var(--b-button-round-radius);
-  }
-
-  &--hairline {
-    border-width: 0;
-
-    &:active {
-      border-width: 0;
     }
 
-    &::after {
-      border-color: inherit;
-      border-radius: calc(var(--b-button-radius) * 2);
+    &--disabled {
+        cursor: not-allowed;
+
+        &.b-button__light,
+        &.b-button__dark,
+        &.b-button {
+            &--primary {
+                background: var(--b-button-primary-background-disabled);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-primary-background-disabled);
+            }
+
+            &--success {
+                background: var(--b-button-success-background-disabled);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-success-background-disabled);
+            }
+
+            &--danger {
+                background: var(--b-button-danger-background-disabled);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-danger-background-disabled);
+            }
+
+            &--warning {
+                background: var(--b-button-warning-background-disabled);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-warning-background-disabled);
+            }
+
+            &--safe {
+                background: var(--b-button-safe-background-disabled);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-safe-background-disabled);
+            }
+
+            &--minor {
+                color: var(--b-button-minor-font-disabled);
+                background: var(--b-button-minor-background-disabled);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-minor-background-disabled);
+            }
+        }
     }
 
-    &.b-button--round::after {
-      border-radius: var(--b-button-round-radius);
+    &--block {
+        display: block;
+        width: 100%;
     }
 
-    &.b-button--square::after {
-      border-radius: 0;
+    &--round {
+        border-radius: var(--b-button-round-radius);
     }
-  }
 
-  &--square {
-    border-radius: 0;
-  }
+    &--hairline {
+        border-width: 0;
+
+        &:active {
+            border-width: 0;
+        }
+
+        &::after {
+            border-color: inherit;
+            border-radius: calc(var(--b-button-radius) * 2);
+        }
+
+        &.b-button--round::after {
+            border-radius: var(--b-button-round-radius);
+        }
+
+        &.b-button--square::after {
+            border-radius: 0;
+        }
+    }
+
+    &--square {
+        border-radius: 0;
+    }
 }
 
 .dark {
-  &--default {
-    color: var(--b-button-default-color-d);
-    background: var(--b-button-default-background-d);
-    border: var(--b-button-border-width) solid var(--b-button-default-border-color-d);
-
-    &:active {
-      background: var(--b-button-default-background-active-d);
-    }
-  }
-
-  &--primary {
-    color: var(--b-button-primary-color-d);
-    background: var(--b-button-primary-background-d);
-    border: var(--b-button-border-width) solid var(--b-button-primary-border-color-d);
-
-    &:active {
-      background: var(--b-button-primary-background-active-d);
-      border: var(--b-button-border-width) solid var(--b-button-primary-background-active-d);
-    }
-  }
-
-  &--success {
-    color: var(--b-button-success-color-d);
-    background: var(--b-button-success-background-d);
-    border: var(--b-button-border-width) solid var(--b-button-success-border-color-d);
-
-    &:active {
-      background: var(--b-button-success-background-active-d);
-      border: var(--b-button-border-width) solid var(--b-button-success-background-active-d);
-    }
-  }
-
-  &--danger {
-    color: var(--b-button-danger-color-d);
-    background: var(--b-button-danger-background-d);
-    border: var(--b-button-border-width) solid var(--b-button-danger-border-color-d);
-
-    &:active {
-      background: var(--b-button-danger-background-active-d);
-      border: var(--b-button-border-width) solid var(--b-button-danger-background-active-d);
-    }
-  }
-
-  &--warning {
-    color: var(--b-button-warning-color-d);
-    background: var(--b-button-warning-background-d);
-    border: var(--b-button-border-width) solid var(--b-button-warning-border-color-d);
-
-    &:active {
-      background: var(--b-button-warning-background-active-d);
-      border: var(--b-button-border-width) solid var(--b-button-warning-background-active-d);
-    }
-  }
-
-  &--safe {
-    color: var(--b-button-safe-color-d);
-    background: var(--b-button-safe-background-d);
-    border: var(--b-button-border-width) solid var(--b-button-safe-border-color-d);
-
-    &:active {
-      background: var(--b-button-safe-background-active-d);
-      border: var(--b-button-border-width) solid var(--b-button-safe-background-active-d);
-    }
-  }
-
-  &--outline {
-    background: var(--b-button-outline-background-d);
-
-    &.b-button__light,
-    &.b-button__dark,
-    &.b-button {
-      &--default {
-        &:active {
-          background: rgba(24, 168, 168, 0.08);
-        }
-      }
-
-      &--primary {
-        color: var(--b-button-primary-background-d);
+    &--default {
+        color: var(--b-button-default-color-d);
+        background: var(--b-button-default-background-d);
+        border: var(--b-button-border-width) solid
+            var(--b-button-default-background-d);
 
         &:active {
-          background: rgba(21, 179, 179, 0.04);
+            background: var(--b-button-default-background-active-d);
         }
-      }
+    }
 
-      &--success {
-        color: var(--b-button-success-background-d);
+    &--primary {
+        color: var(--b-button-primary-color-d);
+        background: var(--b-button-primary-background-d);
+        border: var(--b-button-border-width) solid
+            var(--b-button-primary-background-d);
 
         &:active {
-          background: rgba(100, 194, 54, 0.08);
+            background: var(--b-button-primary-background-active-d);
+            border: var(--b-button-border-width) solid
+                var(--b-button-primary-background-active-d);
         }
-      }
+    }
 
-      &--danger {
-        color: var(--b-button-danger-background-d);
+    &--success {
+        color: var(--b-button-success-color-d);
+        background: var(--b-button-success-background-d);
+        border: var(--b-button-border-width) solid
+            var(--b-button-success-background-d);
 
         &:active {
-          background: rgba(245, 73, 84, 0.08);
+            background: var(--b-button-success-background-active-d);
+            border: var(--b-button-border-width) solid
+                var(--b-button-success-background-active-d);
         }
-      }
+    }
 
-      &--warning {
-        color: var(--b-button-warning-background-d);
+    &--danger {
+        color: var(--b-button-danger-color-d);
+        background: var(--b-button-danger-background-d);
+        border: var(--b-button-border-width) solid
+            var(--b-button-danger-background-d);
 
         &:active {
-          background: rgba(245, 119, 73, 0.08);
+            background: var(--b-button-danger-background-active-d);
+            border: var(--b-button-border-width) solid
+                var(--b-button-danger-background-active-d);
         }
-      }
+    }
 
-      &--safe {
-        color: var(--b-button-safe-background-d);
+    &--warning {
+        color: var(--b-button-warning-color-d);
+        background: var(--b-button-warning-background-d);
+        border: var(--b-button-border-width) solid
+            var(--b-button-warning-background-d);
 
         &:active {
-          background: rgba(44, 124, 245, 0.08);
+            background: var(--b-button-warning-background-active-d);
+            border: var(--b-button-border-width) solid
+                var(--b-button-warning-background-active-d);
         }
-      }
+    }
 
-      &--disabled {
+    &--safe {
+        color: var(--b-button-safe-color-d);
+        background: var(--b-button-safe-background-d);
+        border: var(--b-button-border-width) solid
+            var(--b-button-safe-background-d);
+
+        &:active {
+            background: var(--b-button-safe-background-active-d);
+            border: var(--b-button-border-width) solid
+                var(--b-button-safe-background-active-d);
+        }
+    }
+
+    &--minor {
+        color: var(--b-button-minor-color-d);
+        background: var(--b-button-minor-background-d);
+        border: var(--b-button-border-width) solid
+            var(--b-button-minor-background-d);
+
+        &:active {
+            background: var(--b-button-minor-background-active-d);
+            border: var(--b-button-border-width) solid
+                var(--b-button-minor-background-active-d);
+        }
+    }
+
+    &--outline {
+        background: var(--b-button-outline-background-d);
+
         &.b-button__light,
         &.b-button__dark,
         &.b-button {
-          background: var(--b-button-outline-background-d);
+            &--selected {
+                font-weight: bold;
+                &.b-button__light,
+                &.b-button__dark,
+                &.b-button {
+                    &--default {
+                        background: rgba(24, 168, 168, 0.08);
+                    }
 
-          &--default {
-            color: var(--b-button-primary-background-disabled-d);
-            border-color: var(--b-button-default-border-color-disabled-d);
-          }
+                    &--primary {
+                        color: var(--b-button-primary-background-d);
+                        border-color: var(--b-button-primary-border-color-d);
+                        background: rgba(21, 179, 179, 0.04);
+                    }
 
-          &--primary {
-            color: var(--b-button-primary-background-disabled-d);
-            border-color: var(--b-button-primary-border-color-disabled-d);
-          }
+                    &--success {
+                        color: var(--b-button-success-background-d);
+                        border-color: var(--b-button-success-border-color-d);
+                        background: rgba(100, 194, 54, 0.08);
+                    }
 
-          &--success {
-            color: var(--b-button-success-background-disabled-d);
-            border-color: var(--b-button-success-border-color-disabled-d);
-          }
+                    &--danger {
+                        color: var(--b-button-danger-background-d);
+                        border-color: var(--b-button-danger-border-color-d);
+                        background: rgba(245, 73, 84, 0.08);
+                    }
 
-          &--danger {
-            color: var(--b-button-danger-background-disabled-d);
-            border-color: var(--b-button-danger-border-color-disabled-d);
-          }
+                    &--warning {
+                        color: var(--b-button-warning-background-d);
+                        border-color: var(--b-button-warning-border-color-d);
+                        background: rgba(245, 119, 73, 0.08);
+                    }
 
-          &--warning {
-            color: var(--b-button-warning-background-disabled-d);
-            border-color: var(--b-button-warning-border-color-disabled-d);
-          }
+                    &--safe {
+                        color: var(--b-button-safe-background-d);
+                        border-color: var(--b-button-safe-border-color-d);
+                        background: rgba(44, 124, 245, 0.08);
+                    }
 
-          &--safe {
-            color: var(--b-button-safe-background-disabled-d);
-            border-color: var(--b-button-safe-border-color-disabled-d);
-          }
+                    &--minor {
+                        color: var(--b-button-minor-color-d);
+                        border-color: var(--b-button-minor-border-color-d);
+                        background: rgba(79, 79, 82, 0.08);
+                    }
+                }
+            }
+
+            &--default {
+                &:active {
+                    background: rgba(24, 168, 168, 0.08);
+                }
+            }
+
+            &--primary {
+                color: var(--b-button-primary-background-d);
+                border-color: var(--b-button-primary-border-color-d);
+
+                &:active {
+                    background: rgba(21, 179, 179, 0.04);
+                }
+            }
+
+            &--success {
+                color: var(--b-button-success-background-d);
+                border-color: var(--b-button-success-border-color-d);
+
+                &:active {
+                    background: rgba(100, 194, 54, 0.08);
+                }
+            }
+
+            &--danger {
+                color: var(--b-button-danger-background-d);
+                border-color: var(--b-button-danger-border-color-d);
+
+                &:active {
+                    background: rgba(245, 73, 84, 0.08);
+                }
+            }
+
+            &--warning {
+                color: var(--b-button-warning-background-d);
+                border-color: var(--b-button-warning-border-color-d);
+
+                &:active {
+                    background: rgba(245, 119, 73, 0.08);
+                }
+            }
+
+            &--safe {
+                color: var(--b-button-safe-background-d);
+                border-color: var(--b-button-safe-border-color-d);
+
+                &:active {
+                    background: rgba(44, 124, 245, 0.08);
+                }
+            }
+
+            &--minor {
+                color: var(--b-button-minor-color-d);
+                border-color: var(--b-button-minor-border-color-d);
+
+                &:active {
+                    background: rgba(79, 79, 82, 0.08);
+                }
+            }
+
+            &--disabled {
+                &.b-button__light,
+                &.b-button__dark,
+                &.b-button {
+                    background: var(--b-button-outline-background-d);
+
+                    &--default {
+                        color: var(--b-button-primary-background-disabled-d);
+                        border-color: var(
+                            --b-button-default-border-color-disabled-d
+                        );
+                    }
+
+                    &--primary {
+                        color: var(--b-button-primary-background-disabled-d);
+                        border-color: var(
+                            --b-button-primary-border-color-disabled-d
+                        );
+                    }
+
+                    &--success {
+                        color: var(--b-button-success-background-disabled-d);
+                        border-color: var(
+                            --b-button-success-border-color-disabled-d
+                        );
+                    }
+
+                    &--danger {
+                        color: var(--b-button-danger-background-disabled-d);
+                        border-color: var(
+                            --b-button-danger-border-color-disabled-d
+                        );
+                    }
+
+                    &--warning {
+                        color: var(--b-button-warning-background-disabled-d);
+                        border-color: var(
+                            --b-button-warning-border-color-disabled-d
+                        );
+                    }
+
+                    &--safe {
+                        color: var(--b-button-safe-background-disabled-d);
+                        border-color: var(
+                            --b-button-safe-border-color-disabled-d
+                        );
+                    }
+                    &--minor {
+                        color: var(--b-button-minor-font-disabled-d);
+                        border-color: var(
+                            --b-button-minor-border-color-disabled-d
+                        );
+                    }
+                }
+            }
         }
-      }
     }
-  }
 
-  &--disabled {
-    &.b-button__light,
-    &.b-button__dark,
-    &.b-button {
-      &--primary {
-        background: var(--b-button-primary-background-disabled-d);
-        border: var(--b-button-border-width) solid var(--b-button-primary-background-disabled-d);
-      }
+    &--disabled {
+        &.b-button__light,
+        &.b-button__dark,
+        &.b-button {
+            &--primary {
+                background: var(--b-button-primary-background-disabled-d);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-primary-background-disabled-d);
+            }
 
-      &--success {
-        background: var(--b-button-success-background-disabled-d);
-        border: var(--b-button-border-width) solid var(--b-button-success-background-disabled-d);
-      }
+            &--success {
+                background: var(--b-button-success-background-disabled-d);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-success-background-disabled-d);
+            }
 
-      &--danger {
-        background: var(--b-button-danger-background-disabled-d);
-        border: var(--b-button-border-width) solid var(--b-button-danger-background-disabled-d);
-      }
+            &--danger {
+                background: var(--b-button-danger-background-disabled-d);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-danger-background-disabled-d);
+            }
 
-      &--warning {
-        background: var(--b-button-warning-background-disabled-d);
-        border: var(--b-button-border-width) solid var(--b-button-warning-background-disabled-d);
-      }
-
-      &--safe {
-        background: var(--b-button-safe-background-disabled-d);
-        border: var(--b-button-border-width) solid var(--b-button-safe-background-disabled-d);
-      }
+            &--warning {
+                background: var(--b-button-warning-background-disabled-d);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-warning-background-disabled-d);
+            }
+            &--safe {
+                background: var(--b-button-safe-background-disabled-d);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-safe-background-disabled-d);
+            }
+            &--minor {
+                color: var(--b-button-minor-font-disabled-d);
+                background: var(--b-button-minor-background-disabled-d);
+                border: var(--b-button-border-width) solid
+                    var(--b-button-minor-background-disabled-d);
+            }
+        }
     }
-  }
 }
 
 .b-button__dark {
-  .dark;
+    .dark;
 }
 
 @media (prefers-color-scheme: dark) {
-  .b-button {
-    .dark;
-  }
+    .b-button {
+        .dark;
+    }
 }

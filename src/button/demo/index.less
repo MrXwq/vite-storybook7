@@ -1,1 +1,14 @@
-@import '../../styles/base';
+.demo-button {
+    .b-button {
+
+        &--large,
+        &--small,
+        &--normal:not(:last-child) {
+            margin-right: var(--b-padding-m);
+        }
+    }
+
+    &-row {
+        margin-bottom: var(--b-padding-m);
+    }
+}

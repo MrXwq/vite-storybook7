@@ -9,3 +9,4 @@ export type ButtonType =
     | 'warning'
     | 'success'
     | 'safe'
+    | 'minor'

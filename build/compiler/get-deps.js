@@ -1,4 +1,3 @@
-// import { join } from 'path';
 import { SCRIPT_EXTS } from '../common/constant.js';
 import fs_extra from 'fs-extra'
 const { existsSync, readFileSync } = fs_extra
@@ -19,18 +18,27 @@ export function fillExt(filePath) {
   for (let i = 0; i < SCRIPT_EXTS.length; i++) {
     const completePath = `${filePath}${SCRIPT_EXTS[i]}`;
     if (exists(completePath)) {
-      return completePath;
+      return {
+        path: completePath,
+        isIndex: false,
+      };
     }
   }
 
   for (let i = 0; i < SCRIPT_EXTS.length; i++) {
     const completePath = `${filePath}/index${SCRIPT_EXTS[i]}`;
     if (exists(completePath)) {
-      return completePath;
+      return {
+        path: completePath,
+        isIndex: true,
+      };
     }
   }
 
-  return '';
+  return {
+    path: '',
+    isIndex: false,
+  };
 }
 
 
@@ -80,7 +88,7 @@ export function getDeps(filePath) {
   const imports = matchImports(code);
   // 只要绝对路径的 排除导入的npm包，比如：vue
   const paths = imports
-    .map((item) => getPathByImport(item, filePath))
+    .map((item) => getPathByImport(item, filePath)?.path)
     .filter((item) => !!item);
 
   depsMap[filePath] = paths;

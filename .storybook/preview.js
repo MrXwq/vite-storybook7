@@ -34,12 +34,18 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 const preview = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  // tags: ['autodocs'],
   controls: {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/
     }
   },
+  // docs: {
+  //   source: {
+  //     excludeDecorators: true,
+  //   },
+  // },
   parameters: {
     viewport: {
       viewports: INITIAL_VIEWPORTS,

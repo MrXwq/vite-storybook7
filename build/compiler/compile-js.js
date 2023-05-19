@@ -1,17 +1,17 @@
-import { transformAsync } from '@babel/core';
-import { replaceExt } from '../common/index.js'
+import babel from '@babel/core';
+import { replaceExt, isJsx } from '../common/index.js'
+import esbuild from 'esbuild';
 import fs_extra from 'fs-extra'
 const { readFileSync, removeSync, outputFileSync } = fs_extra
 
-export function compileJs(filePath) {
-    return new Promise((resolve, reject) => {
-        if (filePath.includes('.d.ts')) {
-            resolve();
-            return;
-        }
-        let code = readFileSync(filePath, 'utf-8');
+export async function compileJs(filePath, format) {
+    if (filePath.includes('.d.ts')) {
+        return;
+    }
+    let code = readFileSync(filePath, 'utf-8');
 
-        transformAsync(code, {
+    if (isJsx(filePath)) {
+        const babelResult = await babel.transformAsync(code, {
             filename: filePath,
             babelrc: false,
             presets: ['@babel/preset-typescript'],
@@ -23,14 +23,26 @@ export function compileJs(filePath) {
                     },
                 ],
             ],
-        }).then((result) => {
-            if (result) {
-                const jsFilePath = replaceExt(filePath, '.js');
-                removeSync(filePath);
-                outputFileSync(jsFilePath, result.code);
-                resolve();
-            }
         })
-            .catch(reject);
+        if (babelResult?.code) {
+            ({ code } = babelResult);
+        }
+    }
+
+    const esbuildResult = await esbuild.transform(code, {
+        loader: 'ts',
+        target: 'es2016',
+        format,
     });
+
+    ({ code } = esbuildResult);
+
+    const jsFilePath = replaceExt(filePath, '.js');
+    removeSync(filePath);
+    outputFileSync(jsFilePath, code);
 }
+// if (result) {
+//     const jsFilePath = replaceExt(filePath, '.js');
+//     removeSync(filePath);
+//     outputFileSync(jsFilePath, result.code);
+// }

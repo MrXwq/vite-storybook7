@@ -1,12 +1,12 @@
 import { build } from 'vite';
-// import { getPackageJson, getVantConfig } from '../common/constant.js';
+import { getPackageJson } from '../common/constant.js';
 import { mergeCustomViteConfig } from '../common/index.js';
 import { getViteConfigForPackage } from '../config/vite.package.js';
 
 
 export async function compileBundles() {
-  // const dependencies = getPackageJson().dependencies || {};
-  // const external = Object.keys(dependencies);
+  const dependencies = getPackageJson().dependencies || {};
+  const external = Object.keys(dependencies);
 
   const DEFAULT_OPTIONS = [
     {
@@ -17,14 +17,12 @@ export async function compileBundles() {
       minify: true,
       formats: ['umd'],
     },
-    // {
-    //   minify: false,
-    //   formats: ['es', 'cjs'],
-    //   external,
-    // },
+    {
+      minify: false,
+      formats: ['es', 'cjs'],
+      external,
+    },
   ];
-
-  // const bundleOptions = getVantConfig().build?.bundleOptions || DEFAULT_OPTIONS;
 
   const fn = async (config) => {
     const res = await mergeCustomViteConfig(

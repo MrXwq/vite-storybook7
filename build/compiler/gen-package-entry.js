@@ -1,20 +1,25 @@
-import { SRC_DIR, pascalize } from '../common/constant.js'
+import { pascalize, getComponents, normalizePath } from '../common/index.js'
+import { SRC_DIR } from '../common/constant.js'
 import { smartOutputFile } from '../common/utils.js'
-import { join, relative } from 'path'
+import { join } from 'path'
 
-function getPathByName(name) {
+function getPathByName(name, pathResolver) {
   let path = join(SRC_DIR, name);
-  return `./${relative(SRC_DIR, path)}`;
+  if (pathResolver) {
+    path = pathResolver(path);
+  }
+  return normalizePath(path);
 }
 
 function genImports(
   names,
+  pathResolver,
 ) {
   return names
     .map((name) => {
       const pascalName = pascalize(name);
       const importName = `{ ${pascalName} }`;
-      const importPath = getPathByName(name);
+      const importPath = getPathByName(name, pathResolver);
 
       return `import ${importName} from '${importPath}';`;
     })
@@ -22,9 +27,10 @@ function genImports(
 }
 function genExports(
   names,
+  pathResolver
 ) {
   const exports = names
-    .map((name) => `export * from '${getPathByName(name)}';`)
+    .map((name) => `export * from '${getPathByName(name, pathResolver)}';`)
     .join('\n');
 
   return `
@@ -37,10 +43,11 @@ ${exports}
 }
 export function genPackageEntry({
   outputPath,
-  compList,
+  pathResolver,
 }) {
+  const compList = getComponents();
   const components = compList.map(pascalize)
-  const content = `${genImports(compList)}
+  const content = `${genImports(compList, pathResolver)}
   
 function install(app) {
   const components = [
@@ -55,7 +62,7 @@ function install(app) {
     }
   });
 }
-${genExports(compList)}
+${genExports(compList, pathResolver)}
 export default {
   install,
 };

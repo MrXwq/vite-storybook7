@@ -1,5 +1,5 @@
-import { ALL_COMPONENTS, STYLE_DIR, STYLE_DEPS_JSON_FILE, ES_DIR, LIB_DIR, SRC_DIR } from '../common/constant.js'
-import { replaceExt } from '../common/index.js'
+import { STYLE_DIR, STYLE_DEPS_JSON_FILE, ES_DIR, LIB_DIR, SRC_DIR } from '../common/constant.js'
+import { replaceExt, getComponents } from '../common/index.js'
 import { checkStyleExists } from './gen-style-deps-map.js'
 import fs_extra from 'fs-extra'
 import { join, relative, sep } from 'path'
@@ -23,10 +23,10 @@ function getDeps(component) {
     return [];
 }
 const OUTPUT_CONFIG = [
-    // {
-    //     dir: ES_DIR,
-    //     template: (dep) => `import '${dep}';`,
-    // },
+    {
+        dir: ES_DIR,
+        template: (dep) => `import '${dep}';`,
+    },
     {
         dir: LIB_DIR,
         template: (dep) => `require('${dep}');`,
@@ -67,7 +67,8 @@ export function genComponentStyle() {
 
     const baseFile = join(STYLE_DIR, 'base.less');
 
-    ALL_COMPONENTS.forEach((component) => {
+    const components = getComponents();
+    components.forEach((component) => {
         genEntry({
             baseFile,
             component,

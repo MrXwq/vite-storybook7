@@ -1,0 +1,98 @@
+:root {
+    --b-badge-size: 16px;
+    --b-badge-padding: 0 3px;
+    --b-badge-font-size: var(--b-font-size-s);
+    --b-badge-font-weight: var(--b-font-bold);
+    --b-badge-border-width: var(--b-border-width);
+    --b-badge-dot-size: 8px;
+
+    --b-badge-color: var(--b-l-white-300);
+    --b-badge-background: var(--b-danger-color);
+    --b-badge-dot-color: var(--b-danger-color);
+
+    --b-badge-color-d: var(--b-d-white-300);
+    --b-badge-background-d: var(--b-danger-color-d);
+    --b-badge-dot-color-d: var(--b-danger-color-d);
+}
+
+.b-badge,
+.b-badge__dark,
+.b-badge__light {
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: var(--b-badge-size);
+    padding: var(--b-badge-padding);
+    color: var(--b-badge-color);
+    font-weight: var(--b-badge-font-weight);
+    font-size: var(--b-badge-font-size);
+    line-height: 1.2;
+    text-align: center;
+    background: var(--b-badge-background);
+    border: var(--b-badge-border-width) solid var(--b-l-white-100);
+    border-radius: var(--b-radius-max);
+
+    &--fixed {
+        position: absolute;
+        transform-origin: 100%;
+    }
+
+    &--top-left {
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    &--top-right {
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+
+    &--bottom-left {
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 50%);
+    }
+
+    &--bottom-right {
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+    }
+
+    &--dot {
+        width: var(--b-badge-dot-size);
+        min-width: 0;
+        height: var(--b-badge-dot-size);
+        background: var(--b-badge-dot-color);
+        border-radius: 100%;
+        border: none;
+        padding: 0;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: inline-block;
+    }
+}
+
+.dark {
+    color: var(--b-badge-color-d);
+    background: var(--b-badge-background-d);
+    border: var(--b-badge-border-width) solid var(--b-d-white-100);
+
+    &--dot {
+        background: var(--b-badge-dot-color-d);
+    }
+
+}
+
+.b-badge__dark {
+    .dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    .b-badge {
+        .dark;
+    }
+}

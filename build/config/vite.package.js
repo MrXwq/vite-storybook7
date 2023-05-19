@@ -12,7 +12,7 @@ export function getViteConfigForPackage({
   external = [],
 }) {
 
-  const name = 'brick'
+  const name = 'b'
   const entryExtension = '.js';
   const entry = join(LIB_DIR, `index${entryExtension}`);
 

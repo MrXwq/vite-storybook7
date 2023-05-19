@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   stories: [
     '../stories/**/*.stories.mdx',
     // '../stories/**/*.stories.@(js|jsx|ts|tsx)',
@@ -13,9 +13,15 @@ module.exports = {
     "storyStoreV7": true
   },
   docs: {
-    autodocs: 'tag'
-  }
+    //👇 See the table below for the list of supported options
+    autodocs: true,
+    defaultName: 'Documentation',
+  },
+  // docs: {
+  //   autodocs: 'tag'
+  // }
   // docs: {
   //   autodocs: true
   // }
 };
+export default config;
