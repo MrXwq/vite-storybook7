@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "main": "lib/index.js",
-  "module": "lib/index.js",
+  "module": "es/index.js",
   "typings": "lib/index.d.ts",
   "type": "module",
   "scripts": {
@@ -64,6 +64,13 @@
     "vue-loader": "^16.8.3",
     "vue-tsc": "^1.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrXwq/vite-storybook7"
+  },
+  "bugs": "https://github.com/MrXwq/vite-storybook7/issues",
+  "author": "MrXwq",
+  "license": "MIT",
   "keywords": [
     "ui",
     "vue",
