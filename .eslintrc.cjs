@@ -1,20 +1,26 @@
 /* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution');
+require('@rushstack/eslint-patch/modern-module-resolution')
 module.exports = {
-  env: {
-    node: true,
-  },
-  root: true,
-  'extends': ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/eslint-config-typescript', '@vue/eslint-config-prettier/skip-formatting', 'plugin:storybook/recommended'],
-  parserOptions: {
-    ecmaVersion: 'latest'
-  },
-  rules: {
-    "vue/multi-word-component-names": 'off',
-  },
-  overrides: [
-    {
-      "files": ["src/**/*"],
+    env: {
+        node: true,
     },
-  ]
-};
+    root: true,
+    extends: [
+        'plugin:vue/vue3-essential',
+        'eslint:recommended',
+        '@vue/eslint-config-typescript',
+        '@vue/eslint-config-prettier/skip-formatting',
+        'plugin:storybook/recommended',
+    ],
+    rules: {
+        'vue/multi-word-component-names': 'off',
+    },
+    parserOptions: {
+        ecmaVersion: 'latest',
+    },
+    overrides: [
+        {
+            files: ['src/**/*'],
+        },
+    ],
+}

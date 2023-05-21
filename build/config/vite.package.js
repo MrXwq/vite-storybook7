@@ -1,54 +1,42 @@
-import { join } from 'node:path';
-// import { setBuildTarget } from '../common/index.js';
-import {
-  CWD,
-  // ES_DIR, getVantConfig,
-  LIB_DIR
-} from '../common/constant.js';
+import { join } from 'node:path'
+import { CWD, LIB_DIR } from '../common/constant.js'
 
-export function getViteConfigForPackage({
-  minify,
-  formats,
-  external = [],
-}) {
+export function getViteConfigForPackage({ minify, formats }) {
+    const name = 'b'
+    const entry = join(LIB_DIR, `index.js`)
 
-  const name = 'b'
-  const entryExtension = '.js';
-  const entry = join(LIB_DIR, `index${entryExtension}`);
+    return {
+        root: CWD,
 
-  return {
-    root: CWD,
+        logLevel: 'silent',
 
-    logLevel: 'silent',
-
-    define: {
-      'process.env.NODE_ENV': 'production',
-    },
-
-    build: {
-      emptyOutDir: false,
-
-      lib: {
-        name,
-        entry,
-        formats,
-        fileName: () => {
-          return minify ? `${name}.min.js` : `${name}.js`;
+        define: {
+            'process.env.NODE_ENV': 'production',
         },
-      },
 
-      // terser has better compression than esbuild
-      minify: minify ? 'terser' : false,
-      rollupOptions: {
-        external: [...external, 'vue'],
-        output: {
-          dir: LIB_DIR,
-          exports: 'named',
-          globals: {
-            vue: 'Vue',
-          },
+        build: {
+            emptyOutDir: false,
+
+            lib: {
+                name,
+                entry,
+                formats,
+                fileName: () => {
+                    return minify ? `${name}.min.js` : `${name}.js`
+                },
+            },
+
+            minify: minify ? 'terser' : false,
+            rollupOptions: {
+                external: ['vue'],
+                output: {
+                    dir: LIB_DIR,
+                    exports: 'named',
+                    globals: {
+                        vue: 'Vue',
+                    },
+                },
+            },
         },
-      },
-    },
-  };
+    }
 }

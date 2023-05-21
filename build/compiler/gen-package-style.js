@@ -1,43 +1,42 @@
-import { smartOutputFile } from '../common/utils.js'
 import { STYLE_DEPS_JSON_FILE, STYLE_DIR, SRC_DIR } from '../common/constant.js'
-import { normalizePath } from '../common/index.js'
+import { normalizePath, smartOutputFile } from '../common/index.js'
 import { join } from 'path'
-import { createRequire } from 'node:module';
+import { createRequire } from 'node:module'
 import fs_extra from 'fs-extra'
 const { existsSync } = fs_extra
 
 export function genPackageStyle(options) {
-    const require = createRequire(import.meta.url);
-    const styleDepsJson = require(STYLE_DEPS_JSON_FILE);
+    const require = createRequire(import.meta.url)
+    const styleDepsJson = require(STYLE_DEPS_JSON_FILE)
     const ext = '.less'
 
-    let content = '';
+    let content = ''
 
-    let baseFile = join(STYLE_DIR, 'base.less');
+    let baseFile = join(STYLE_DIR, 'base.less')
     if (baseFile) {
         if (options.pathResolver) {
-            baseFile = options.pathResolver(baseFile);
+            baseFile = options.pathResolver(baseFile)
         }
 
-        content += `@import "${normalizePath(baseFile)}";\n`;
+        content += `@import "${normalizePath(baseFile)}";\n`
     }
 
     content += styleDepsJson.sequence
         .map((name) => {
-            let path = join(SRC_DIR, `${name}/index${ext}`);
+            let path = join(SRC_DIR, `${name}/index${ext}`)
 
             if (!existsSync(path)) {
-                return '';
+                return ''
             }
 
             if (options.pathResolver) {
-                path = options.pathResolver(path);
+                path = options.pathResolver(path)
             }
 
-            return `@import "${normalizePath(path)}";`;
+            return `@import "${normalizePath(path)}";`
         })
         .filter((item) => !!item)
-        .join('\n');
+        .join('\n')
 
-    smartOutputFile(options.outputPath, content);
+    smartOutputFile(options.outputPath, content)
 }

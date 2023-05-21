@@ -11,32 +11,18 @@ export default {
     title: '基础组件/Icon',
     component: BIcon,
     argTypes: {
-        name: defaultProp(
-            'Props',
-            '',
-            'string',
-            'icon图标库或者图片绝对地址，参考icon.less',
-            {
-                options: [
-                    'https://img.bosszhipin.com/beijin/cms/b3dc9adbac4de3409c775e6cf89181edea38f4f6ba3949bbe44e8ad13cdd1fcf5d41947c239b42fcb8e2d33818747a71.png?x-oss-process=image%2Fresize%2Cw_150',
-                    ...allIcons,
-                ],
-                control: {
-                    type: 'select',
-                },
+        name: defaultProp('Props', '', 'string', 'icon图标库或者图片绝对地址，参考icon.less', {
+            options: [...allIcons],
+            control: {
+                type: 'select',
             },
-        ),
+        }),
         dot: defaultProp('Props', 'false', 'boolean', '是否展示为小红点', {
             control: {
                 type: 'boolean',
             },
         }),
-        badge: defaultProp(
-            'Props',
-            '-',
-            'number | string',
-            '图标右上角徽标的内容',
-        ),
+        badge: defaultProp('Props', '-', 'number | string', '图标右上角徽标的内容'),
         size: defaultProp(
             'Props',
             'inherit',
@@ -89,7 +75,7 @@ export const Template = {
         color: 'inherit',
         'badge-props': undefined,
     },
-  };
+}
 
 const AllTemplate = () => ({
     components: { BIcon },

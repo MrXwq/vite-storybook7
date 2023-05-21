@@ -54,17 +54,6 @@ function matchImports(code) {
   const imports = code.match(IMPORT_RE) || [];
   return imports.filter((line) => !line.includes('import type'));
 }
-// "import App from 'App.vue';" => "import App from 'App.xxx';"
-export function replaceScriptImportExt(code, from, to) {
-  const importLines = matchImports(code);
-
-  importLines.forEach((importLine) => {
-    const result = importLine.replace(from, to);
-    code = code.replace(importLine, result);
-  });
-
-  return code;
-}
 
 function getPathByImport(code, filePath) {
   const divider = code.includes('"') ? '"' : "'";
